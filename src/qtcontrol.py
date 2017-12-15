@@ -1,8 +1,12 @@
 from threading import Thread
 
-from PySide.QtCore import *
-from PySide.QtGui import *
-from PySide.QtDeclarative import QDeclarativeView
+from PySide2.QtCore import *
+from PySide2.QtGui import *
+
+# TODO: track down the correct dependency here
+# Note: http://pyqt.sourceforge.net/Docs/PyQt5/pyqt4_differences.html#qtdeclarative-qtscript-and-qtscripttools-modules
+#from PySide.QtDeclarative import QDeclarativeView
+
 import os.path
 import csv
 

@@ -5,7 +5,7 @@ import socket, sys
 from threading import Thread
 from inspect import getargspec
 
-from PySide import QtCore
+from PySide2 import QtCore
 
 class Commands(QtCore.QObject):
     msg=[]
