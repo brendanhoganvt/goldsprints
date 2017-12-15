@@ -44,7 +44,7 @@ class QtControl(Thread):
 
         self.gs = gs
         self.cmd=Commands(gs)
-        self.results=ResultsModel(self.gs.best_times['_'])
+        self.results=ResultsModel(self.gs.best_times[self.gs.sets[0]])
 
     def get_results(self):
         # self.ctxt.setContextProperty("resutlts", [['<b>{0: >4}.</b> {2} [<font align="right" color="grey">{1:.2f}</font>]'.format(i, t[0], t[1]['name'])
