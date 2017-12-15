@@ -1,4 +1,4 @@
-import QtQuick 1.0
+import QtQuick 2.10
 
 Item {
     property string id
