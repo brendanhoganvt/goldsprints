@@ -1,5 +1,5 @@
-import Qt 4.7
-import QtQuick 1.1
+import Qt 5.10
+import QtQuick 2.10
 
 Item {
     id: r

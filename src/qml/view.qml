@@ -1,4 +1,4 @@
-import Qt 4.7
+import Qt 5.10
 
 Item {
     id: tabWidget
