@@ -2,10 +2,7 @@ from threading import Thread
 
 from PySide2.QtCore import *
 from PySide2.QtGui import *
-
-# TODO: track down the correct dependency here
-# Note: http://pyqt.sourceforge.net/Docs/PyQt5/pyqt4_differences.html#qtdeclarative-qtscript-and-qtscripttools-modules
-#from PySide.QtDeclarative import QDeclarativeView
+from PySide2.QtQuick import *
 
 import os.path
 import csv
@@ -57,9 +54,9 @@ class QtControl(Thread):
         self.ctxt.setContextProperty("results", self.results)
 
     def run(self):
-        self.app=QApplication([])
-        self.view=QDeclarativeView()
-        self.view.setResizeMode(QDeclarativeView.SizeRootObjectToView)
+        self.app=QGuiApplication([])
+        self.view=QQuickView()
+        self.view.setResizeMode(QQuickView.SizeRootObjectToView)
 
         self.ctxt = self.view.rootContext()
         # setting context properities
