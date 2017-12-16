@@ -27,13 +27,21 @@ class ResultsModel(QAbstractListModel):
     def __init__(self, results):
         QAbstractListModel.__init__(self, None)
         self.results=results
-        self.roleNames = dict({ ResultsModel.NAME_ROLE : 'name', ResultsModel.RES_ROLE : 'result' })
+#        self.roleNames = dict({ ResultsModel.NAME_ROLE : 'name', ResultsModel.RES_ROLE : 'result' })
+
+    def roleNames(self):
+        roles = {
+            ResultsModel.NAME_ROLE : 'name',
+            ResultsModel.RES_ROLE : 'result'
+        }
+        return roles
 
     def data(self, index, role):
         if role == ResultsModel.NAME_ROLE:
             return self.results[index.row()][1]['name']
         elif role == ResultsModel.RES_ROLE:
             return self.results[index.row()][0]
+        return None
 
     def rowCount(self, index):
         return len(self.results)
