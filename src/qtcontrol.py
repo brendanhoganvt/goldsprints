@@ -26,7 +26,6 @@ class ResultsModel(QAbstractListModel):
     def __init__(self, results):
         QAbstractListModel.__init__(self, None)
         self.results=results
-#        self.roleNames = dict({ ResultsModel.NAME_ROLE : 'name', ResultsModel.RES_ROLE : 'result' })
 
     def roleNames(self):
         roles = {
