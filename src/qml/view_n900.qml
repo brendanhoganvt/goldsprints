@@ -226,7 +226,7 @@ Item {
                     width: 50
                     text: index+1
                     font.pixelSize: 40
-                    color: "white"
+                    color: "yellow"
                 }
                 Text { 
                     font.letterSpacing: 4
@@ -234,7 +234,7 @@ Item {
                     anchors.margins: 10
                     text: name
                     width: 250
-                    color: "white"
+                    color: "yellow"
                     font.pixelSize: 40
                 }
                 Text {
