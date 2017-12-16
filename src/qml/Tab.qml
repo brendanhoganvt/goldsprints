@@ -1,5 +1,5 @@
 
-import QtQuick 2.10
+import QtQuick 2.0
 
 Rectangle {
     property variant tabs
